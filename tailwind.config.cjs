@@ -1,9 +1,6 @@
 module.exports = {
   content: ['./src/**/*.{svelte,js,ts}'],
-  // add daisyUI plugin
-  plugins: [require("daisyui")],
-
-  // daisyUI config (optional)
+  plugins: [require('daisyui')],
   daisyui: {
     styled: true,
     themes: true,
