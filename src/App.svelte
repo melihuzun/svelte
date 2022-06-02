@@ -1,21 +1,13 @@
-<script>
-	async function getData(){
-		const res=await fetch("https://api.github.com/users/melihuzun/repos")
-		const data=await res.json()
-		return data;
-	}
-</script>
-{#await getData()}
-	<p>test</p>
-{:then data} 
-	{#each data as repo (repo.id)}
-	{#if !repo.fork && !repo.has_pages}
-		<h1><a href="{repo.html_url}">{repo.name}</a></h1>
-		{#if repo.description}
-			<p>{repo.description}</p>
-		{:else}
-		<p>This repo have any description</p>
-		{/if}
-	{/if}
-	{/each}
-{/await}
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Hello there</h1>
+      <p class="py-6">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+        excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+        id nisi.
+      </p>
+      <button class="btn btn-primary">Get Started</button>
+    </div>
+  </div>
+</div>
